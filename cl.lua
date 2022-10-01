@@ -1,6 +1,6 @@
 
 
-RegisterKeyMapping('pmavoiceui', 'mute', 'keyboard', 'M')
+RegisterKeyMapping('mute', 'mute yourself', 'keyboard', 'M')
 
 RegisterNetEvent('ddev_mute:show')
 AddEventHandler('ddev_mute:show', function()
