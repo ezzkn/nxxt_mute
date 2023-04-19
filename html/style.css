@@ -1,0 +1,50 @@
+
+
+
+
+
+body {
+    display: none;
+    width: 100%;
+    height: auto;
+    transition: all linear;
+    animation-timing-function: linear;
+    overflow: hidden;
+}
+
+
+.banner {
+    background-image: url(background.svg);
+    background-repeat: no-repeat;
+    height: 150vh;
+    position: relative;
+    top: -5vh;   
+}
+
+.text {
+    z-index: 10;
+    text-transform: uppercase;
+    font-size: 4vh;
+    position: relative;
+    bottom: 5vh;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    color: #ff0000;
+    animation: ezzkn-up 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text-shadow: 0px 0px 19px #ff0000;
+ 
+}
+
+
+
+@keyframes ezzkn-up {
+    0% {bottom: -85vh}
+    50% {bottom: -80.5vh}
+    100% {bottom: -85vh}
+}
