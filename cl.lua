@@ -1,14 +1,19 @@
 
+mute = false
+RegisterKeyMapping(Config.Command, Config.Helptext, 'keyboard', Config.Hotkey)
 
-RegisterKeyMapping('mute', 'mute yourself', 'keyboard', 'M')
 
-RegisterNetEvent('ddev_mute:show')
-AddEventHandler('ddev_mute:show', function()
-SendNUIMessage({type = "enableui"})
-end)
 
-RegisterNetEvent('ddev_mute:hide')
-AddEventHandler('ddev_mute:hide', function()
-SendNUIMessage({type = "disableui"})
+    RegisterCommand(Config.Command, function()
+    local id = GetPlayerServerId(PlayerId())
+    if mute == false then
+        TriggerServerEvent('nxxt:mute', id)
+        SendNUIMessage({type = "enableui"})
+        mute = true
+    else
+        TriggerServerEvent('nxxt:unmute', id)
+        SendNUIMessage({type = "disableui"})
+        mute = false
+    end
 end)
 
