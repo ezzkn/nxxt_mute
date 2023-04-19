@@ -1,21 +1,11 @@
+RegisterNetEvent('nxxt:mute')
+AddEventHandler('nxxt:mute', function(id)
+MumbleSetPlayerMuted(id, true)
+end)
 
 
-
-
-
-muteme = false
-RegisterCommand('mute', function(source)
-local src = source
-    if not muteme then
-        MumbleSetPlayerMuted(src, true)
-        muteme = true
-        Wait(100)
-        TriggerClientEvent('ddev_mute:show', src)
-    else
-        MumbleSetPlayerMuted(src, false)
-        muteme = false
-        Wait(100)
-        TriggerClientEvent('ddev_mute:hide', src)
-    end
+RegisterNetEvent('nxxt:unmute')
+AddEventHandler('nxxt:unmute', function(id)
+MumbleSetPlayerMuted(id, false)
 end)
 
