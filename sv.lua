@@ -1,17 +1,10 @@
-
-
-
-
-
-
-
 RegisterNetEvent('nxxt:mute')
-AddEventHandler('nxxt:mute', function(id)
-MumbleSetPlayerMuted(id, true)
+AddEventHandler('nxxt:mute', function()
+MumbleSetPlayerMuted(source, true)
 end)
 
 
 RegisterNetEvent('nxxt:unmute')
-AddEventHandler('nxxt:unmute', function(id)
-MumbleSetPlayerMuted(id, false)
+AddEventHandler('nxxt:unmute', function()
+MumbleSetPlayerMuted(source, false)
 end)
