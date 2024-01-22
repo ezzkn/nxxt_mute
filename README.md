@@ -1,1 +1,1 @@
-![some](https://api.rkmy.xyz/image.png)
+![some](https://api.rkmy.xyz/image.png/)
